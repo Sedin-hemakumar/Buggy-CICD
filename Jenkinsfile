@@ -2,9 +2,9 @@ pipeline {
   agent any
 
   environment {
-    AWS_ACCESS_KEY_ID = 'ASIASJCHX6HE2VE5KW4K'
-    AWS_SECRET_ACCESS_KEY = 'XQ9C74IVNKToCR2H8Uol0QTl8QYcII0CxPqb76CN'
-    AWS_SESSION_TOKEN = 'IQoJb3JpZ2luX2VjEBsaCmFwLXNvdXRoLTEiSDBGAiEAte1v6E/bpvLDfSEtyC/R6UTmB5yexl2EL4++ZhBK2iICIQCJg+TymSo6vq6shs2YnSwrWTKumYWFK7cWr1dffhT5mSqcAwhEEAAaDDE1NjkxNjc3MzMyMSIMoIHMCLJ4mzETvBlQKvkC5k2bZsImyK6QhL/9QwDW5QHSjEtcbtuHoy8OIBOTxRxorw//nROLXTg05+seTIFQqhFwHxYyRZaKQJ3x7VcQzztMUhrtzDVG+AGhqVqA+IUeJWuGlbtejKhmMcj5f2Gnsb6/k92hpuPjq2VArFojobymdeiPhAovdXo6R3lEbsn8nEdllDuLjua5Ii9ykO7SJWF2u5wdZiGu4dBADPbjL1EGlVBALfejINr3YpRyWGqUpju0ioI4kF9SABjSwEE+v4E/FWlap2FI+7ssj3o+2B7WCp1IhggaRNUJeogPer+5YU8RAcip0t4MzQ29I6W9C9yxD38e2ZjXLqY5f0ATu1vM9u7DBdERfsf31Y06Kv7VNdWgp33tuZBr7FdLWOUckZpRvBcjp7/Qj0Zzhyfa9Gb9Ka3YZdNL0h6ZYb/ZcH1touTeJUkCCd8lo6YJOtdJCnsTUFM2NvzZawIACrAhynlqON6IazoSZXCbqoreDnwcwTEqGYcvucAwxM6NxAY6pQEp1dQNrtySbOWWJRijlzb5NCCn8bhWhA7Mdt/p64gqJS4A8SC5TFPyzybrYQRbfm19nZZlju2pEw8hV9h7C3Ot+RbkGBYPSZHS2tgvUZW282+9jGHK2bckQfi8C3y1msgi+TM9dpJrOO6GoR7TsXrsaAEBLNeELHnJaNKiR9J+uPaJC0ZCnhBD/GshjbCIAoqtXQucQ1CWnaryr3Z9YfSzaFbC3vw='
+    AWS_ACCESS_KEY_ID = 'ASIASJCHX6HERDGXFPSE'
+    AWS_SECRET_ACCESS_KEY = 'FhVZ5Aoys/Vt7hO8Lm1gOafQsezjuW1F+0rpcGRU'
+    AWS_SESSION_TOKEN = 'IQoJb3JpZ2luX2VjEDkaCmFwLXNvdXRoLTEiSDBGAiEA3ONC+sszQ50pnLuyAE+8O/afWdm8i/dI6uXL4Ud0gLcCIQDMf3QHARJIK1NW89hxT+AvOPPdudV6/BusA4wXqXJpRCqcAwhjEAAaDDE1NjkxNjc3MzMyMSIM1FWEXaQx3ZlDX2ckKvkCjEj3KQgzV3HMzoFwebnSh4pp87fXB8unhwhbdw5QS3S1JGzqMJj1eXM1+TlHt+Tv3wPUvjtGL21KaI1DT1lsEEAghod4zKl6pMgXe8xZEwrY3EnjF3ZhbyRPUc+bOdrGchVZXmCyBoXZJ3jr2Zo4A9KtEzXfeWBcjjotvY1kRyjpBKvoL/clUuOZqzdlfFh7X19wza3bXzz60s3qhLwkaVl3vD8aZTkufrA4vr/qZ8G6h96s9mzdauJu3BTDTsq6q4gkM+nokVhzsei6xcT2IL1zHXHizVHU/Q8yPcHssL9f+M905xg+6hHSR8gT/cigFMEiOTg9ciq5qxOulzu7wTEa/RJPklijIzMGj0y3W8pwRXNR3KNze63e/dTChgrOc9cSvXCoUO8W1swGvgprHhggxummuKVdMYbDWC4v5hBMam5+miIVItvaeDAZ+sjE6PkLYRVHFYStoHd3xonGTL4Hdp8lZqkEQauYTl2vfjFwedCNlTK6h4EwyZ+UxAY6pQGX4LcafvegQMdmT9lbxmF7SM1S3RUWSyPIhAwDa6qPW0qLJJJrMbvYmjaUn74eMhdtx1N0/0D626dSoKKtK+b00bx1AushVZwc1zMwwk2YnKkG+xBcKrIW+Ar1LrtE2g4+ywDytbWgUlJfMpNc6oDQAWljizNR1gG+yr9eWw8cppRWSo+B6VtFtgja2fWh/Vi53jv7kGRL65Tr7nCFNkIxJeNF+pM='
     AWS_REGION = 'ap-south-1'
     IMAGE_TAG = 'latest'
     ECR_REGISTRY = '156916773321.dkr.ecr.ap-south-1.amazonaws.com'
@@ -12,7 +12,7 @@ pipeline {
   }
 
   stages {
-    stage('Checkout Code') {
+    stage('Checkout Codes') {
       steps {
         git branch: 'Hemath', url: 'https://github.com/Sedin-hemakumar/Buggy-CICD.git'
       }
