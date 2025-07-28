@@ -4,13 +4,21 @@ pipeline {
   environment {
     IMAGE_TAG = 'latest'  
   }
-
-  stages {
-    stage('Checkout Code') {
-      steps {
-        git branch: 'Hemath', url: 'https://github.com/Sedin-hemakumar/Buggy-CICD.git'
-      }
+stages {
+  stage('Checkout Code') {
+    steps {
+      checkout([
+        $class: 'GitSCM',
+        branches: [[name: '*/Hemath']],
+        userRemoteConfigs: [[
+          url: 'https://github.com/Sedin-hemakumar/Buggy-CICD.git',
+          credentialsId: 'Github password' 
+        ]]
+      ])
     }
+  }
+}
+
 
    stage('Docker Login to ECR') {
   steps {
