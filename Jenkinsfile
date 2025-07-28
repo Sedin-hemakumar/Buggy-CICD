@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    IMAGE_TAG = 'latest'  // Optional: make dynamic if needed
+    IMAGE_TAG = 'latest'  
   }
 
   stages {
