@@ -7,17 +7,14 @@ pipeline {
 
   stages {
     stage('Checkout Code') {
-      steps {
-        checkout([
-          $class: 'GitSCM',
-          branches: [[name: '*/Hemath']],
-          userRemoteConfigs: [[
-            url: 'https://github.com/Sedin-hemakumar/Buggy-CICD.git',
-            credentialsId: 'Github password'
-          ]]
-        ])
-      }
+        steps {
+            sh '''
+              git clone https://github.com/Sedin-hemakumar/Buggy-CICD.git
+            '''
+        }
     }
+}
+
 
     stage('Docker Login to ECR') {
       steps {
