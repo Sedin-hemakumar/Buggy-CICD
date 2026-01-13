@@ -81,9 +81,9 @@ pipeline {
     stage('Docker Login to ECR') {
       steps {
         withCredentials([
-          string(credentialsId: 'AWS access key ID', variable: 'AWS_ACCESS_KEY_ID'),
-          string(credentialsId: 'AWS secret access key', variable: 'AWS_SECRET_ACCESS_KEY'),
-          string(credentialsId: 'AWS session token', variable: 'AWS_SESSION_TOKEN'),
+          string(credentialsId: 'aws-access-key-id', variable: 'AWS_ACCESS_KEY_ID'),
+          string(credentialsId: 'aws-secret-access-key', variable: 'AWS_SECRET_ACCESS_KEY'),
+          string(credentialsId: 'aws-session-token', variable: 'AWS_SESSION_TOKEN'),
           string(credentialsId: 'aws-region', variable: 'AWS_REGION'),
           string(credentialsId: 'ecr-registry', variable: 'ECR_REGISTRY')
         ]) {
