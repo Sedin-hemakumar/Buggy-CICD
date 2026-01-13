@@ -1,4 +1,5 @@
-FROM ruby:3.3.8
+FROM ruby:3.3.8-slim
+
 # Set working directory
 WORKDIR /app
 
