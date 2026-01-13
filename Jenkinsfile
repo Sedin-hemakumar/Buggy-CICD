@@ -125,8 +125,8 @@ pipeline {
     stage('Run with Docker Compose') {
       steps {
         sh '''
-          docker-compose down || true
-          docker-compose up -d
+          docker compose down || true
+          docker compose up -d
         '''
       }
     }
